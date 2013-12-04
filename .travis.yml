@@ -1,4 +1,10 @@
 language: ruby
 rvm:
-  - 2.0.0
-
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: D/gNVENvap0cs5SSPza1goFiRrk3rPbpNe6aA/C9bugUCongvw5hqqzSlTgXWOQSWzcwelUcFC1iQvMzwc7AGiJEpFxfgTvQyYmEYHBvqdHenGJ7LItJYiS+GJHp54vn01sqC4vzHJZVcbyb7qVA8Ckmi8Gimpi3dCEHT7Y1erc=
+  app: murmuring-sierra-9630
+  on:
+    repo: itatky/dviz
