@@ -46,3 +46,9 @@ end
 gem 'rails_12factor', group: :production
 ruby "2.0.0"
 
+group :test do
+  gem 'rake'
+  gem 'rspec-rails'
+  gem "capybara"
+end
+
