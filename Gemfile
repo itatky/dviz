@@ -3,13 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-gem 'simple_form'
-gem 'therubyracer'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
-
 # Use postgresql as the database for Active Record
-gem 'pg'
+#gem 'pg'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -56,4 +52,9 @@ group :test do
   gem 'rspec-rails'
   gem "capybara"
 end
+
+gem 'rest-client'
+gem 'json'
+gem 'bootstrap-sass-rails'
+gem 'rspec-rails'
 
