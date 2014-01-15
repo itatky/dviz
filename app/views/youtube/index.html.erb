@@ -1,0 +1,28 @@
+<h1>Youtube検索</h1>
+<div id="searh-form">
+<%= form_tag( {controller: :youtube, action: :search}, {class: "form-search", method: :get}) do %>
+  <%= text_field_tag :keyword, @keyword, :class=>"input-medium search-query" %>
+  <%= submit_tag '検索', :class=>"btn btn-primary" %>
+<% end %>
+</div>
+
+
+<% if @videos != nil %>
+  <div id="search-results">
+  <% for title, link in @videos %>
+    <dl>
+      <dt><%= title %></dt>
+      <dd>
+	<object width="200" height="200">
+	  <param name="movie" value="<%= link %>"</param>
+		 <param name="wmode" value="transparent">
+		 <param name="allowFullScreen" value="false"></param>
+		 <embed src="<%= link %>" type="application/x-shockwave-flash" wmode="transparent" 
+			width="425" height="336" allowfullscreen="false"></embed>
+	</object>
+      </dd>
+    </dl>
+  <% end %>
+  </div>
+<% end %>
+
